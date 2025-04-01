@@ -61,14 +61,16 @@ export default function App() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="hero-cta"
         >
-          <a
-            href="https://www.vantagemarkets.com/open-live-account/?affid=MTQ2OTEz"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Changed from external link to internal navigation */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setPage("guide");
+            }}
             className="btn gradient-pink"
           >
             Get Started
-          </a>
+          </button>
         </motion.div>
       </section>
 
@@ -152,29 +154,230 @@ export default function App() {
   const GuidePage = (
     <section className="section-wrapper" style={{ marginTop: "4rem" }}>
       <h2 className="section-title">Detailed Setup Guide</h2>
-      <p
+      <div
         style={{
           color: "rgba(255,255,255,0.8)",
           maxWidth: "700px",
           margin: "0 auto",
           lineHeight: 1.6,
+          textAlign: "left",
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        vehicula mollis risus, ac auctor lorem fermentum non. Quisque aliquet
-        magna non tortor interdum, at tincidunt libero laoreet.
-      </p>
-      <p
-        style={{
-          color: "rgba(255,255,255,0.8)",
-          maxWidth: "700px",
-          margin: "1.5rem auto 0 auto",
-          lineHeight: 1.6,
-        }}
-      >
-        Donec mi lectus, varius eget sagittis sit amet, tristique vel orci. Duis
-        maximus odio lacus, sed tempor tellus ornare a.
-      </p>
+        <ol style={{ listStyle: "none", padding: 0, counterReset: "step" }}>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>1</span>
+            </span>
+            <strong>Open an Account</strong>
+            <br />
+            Click our{" "}
+            <a
+              href="https://www.vantagemarkets.com/open-live-account/?affid=MTQ2OTEz"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#FF7E00" }}
+            >
+              affiliate link
+            </a>{" "}
+            to open a Vantage account. If you already have one, skip to Step 3.
+          </li>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>2</span>
+            </span>
+            <strong>Verify Your Account</strong>
+            <br />
+            Complete the standard verification process (KYC) to fully activate
+            your new account.
+          </li>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>3</span>
+            </span>
+            <strong>Create a PAMM MT4 Account</strong>
+            <br />
+            You’ll receive an email with your new account number and password
+            once it’s created.
+          </li>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>4</span>
+            </span>
+            <strong>Deposit Funds</strong>
+            <br />
+            Our minimum is <strong>$10</strong>. Simply deposit into your PAMM
+            trading account.
+          </li>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>5</span>
+            </span>
+            <strong>Join Our PAMM</strong>
+            <br />
+            Go to{" "}
+            <a
+              href="https://pamm.vantagemarkets.com/app/join/1458/passivepips"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#FF7E00" }}
+            >
+              this link
+            </a>
+            , log in with your PAMM credentials, and request to allocate your
+            deposited funds.
+          </li>
+          <li
+            style={{
+              marginBottom: "1.5rem",
+              position: "relative",
+              paddingLeft: "2.2rem",
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "1.8rem",
+                height: "1.8rem",
+                background: "#FF7E00",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#fff",
+                fontWeight: "bold",
+                counterIncrement: "step",
+              }}
+            >
+              <span style={{ fontSize: "0.9rem" }}>6</span>
+            </span>
+            <strong>Approval & Monitoring</strong>
+            <br />
+            We approve new investments <strong>once a week</strong>. After
+            approval, track your investment anytime via{" "}
+            <a
+              href="https://pamm.vantagemarkets.com/app/auth/investor"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#FF7E00" }}
+            >
+              this link
+            </a>
+            .
+          </li>
+        </ol>
+      </div>
     </section>
   );
 
