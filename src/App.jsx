@@ -10,9 +10,8 @@ export default function App() {
 
   return (
     <>
-      {/* Main Container */}
       <div className="main-wrapper">
-        {/* Abstract Background Shapes */}
+        {/* Animated Abstract Backgrounds */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
           animate={{ opacity: 0.6, scale: 1, rotate: 360 }}
@@ -31,7 +30,6 @@ export default function App() {
           className="abstract-shape shape-two"
         ></motion.div>
 
-        {/* Header / Navigation */}
         <header className="header">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -53,7 +51,6 @@ export default function App() {
           </motion.nav>
         </header>
 
-        {/* Hero Section */}
         <section className="hero">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -88,7 +85,6 @@ export default function App() {
           </motion.div>
         </section>
 
-        {/* How It Works Section */}
         <section id="how" className="section-wrapper">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -135,7 +131,6 @@ export default function App() {
           </motion.div>
         </section>
 
-        {/* Risk / Transparency Section */}
         <section id="risk" className="section-wrapper">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -165,7 +160,6 @@ export default function App() {
           </motion.div>
         </section>
 
-        {/* Signup CTA */}
         <section id="signup" className="section-wrapper">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -201,7 +195,6 @@ export default function App() {
         </footer>
       </div>
 
-      {/* Inline CSS Styles */}
       <style>{`
         /* GENERAL RESETS */
         * {
@@ -282,7 +275,7 @@ export default function App() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 2rem 1rem;
+          padding: 3rem 1rem;
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
@@ -301,6 +294,8 @@ export default function App() {
         .hero-subtitle {
           color: rgba(255,255,255,0.8);
           margin-bottom: 2rem;
+          font-size: 1.1rem;
+          line-height: 1.5;
         }
         .hero-cta {
           margin-top: 1rem;
@@ -347,11 +342,7 @@ export default function App() {
         .card-grid {
           display: grid;
           gap: 1.5rem;
-        }
-        @media (min-width: 768px) {
-          .card-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
         .card {
           background: rgba(255,255,255,0.1);
@@ -366,17 +357,19 @@ export default function App() {
         .card-text {
           font-size: 0.9rem;
           color: rgba(255,255,255,0.8);
+          line-height: 1.4;
         }
 
         /* RISK SECTION */
         .risk-text {
           display: flex;
           flex-direction: column;
-          gap: 1rem;
+          gap: 1.5rem;
           font-size: 1rem;
           color: rgba(255,255,255,0.8);
           max-width: 700px;
           margin: 0 auto;
+          line-height: 1.5;
         }
 
         /* SIGNUP SECTION */
@@ -384,6 +377,7 @@ export default function App() {
           color: rgba(255,255,255,0.8);
           max-width: 600px;
           margin: 0.5rem auto 1rem auto;
+          line-height: 1.5;
         }
 
         /* FOOTER */
@@ -395,6 +389,36 @@ export default function App() {
           color: rgba(255,255,255,0.7);
         }
 
+        @media (max-width: 600px) {
+          .hero {
+            padding: 2rem 1rem;
+          }
+          .hero-title {
+            font-size: 1.75rem;
+          }
+          .hero-subtitle {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          }
+          .btn {
+            font-size: 1rem;
+            padding: 0.75rem 1.25rem;
+          }
+          .card {
+            padding: 1.25rem;
+          }
+          .section-wrapper {
+            padding: 2rem 1.25rem;
+          }
+          .header {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          .section-title {
+            font-size: 1.75rem;
+          }
+        }
       `}</style>
     </>
   );
