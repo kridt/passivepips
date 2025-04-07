@@ -97,6 +97,43 @@ export default function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Passive Pips | Automated Trading. Passive Income.</title>
+        <meta
+          name="description"
+          content="Start earning passive income using automated trading strategies powered by AI. Simple. Scalable. Secure."
+        />
+        <meta
+          name="keywords"
+          content="automated trading, passive income, crypto bots, AI trading, passivepips"
+        />
+        <meta property="og:title" content="Passive Pips" />
+        <meta
+          property="og:description"
+          content="Earn passive income with automated trading strategies. Powered by AI."
+        />
+        <meta property="og:url" content="https://passivepips.com" />
+        <meta
+          property="og:image"
+          content="https://passivepips.com/og-preview.jpg"
+        />
+
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Passive Pips",
+        "url": "https://passivepips.com",
+        "description": "Earn passive income using AI-powered trading bots.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Passive Pips"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
       <div className="main-wrapper">
         {/* Animated Abstract Backgrounds */}
         <motion.div
