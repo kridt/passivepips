@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import CookieConsent from "react-cookie-consent";
 import emailjs from "emailjs-com"; // ← EmailJS import
 import { Helmet } from "react-helmet";
+import { Link } from "react-scroll";
 
 // Dynamically inject Google Tag script when user accepts cookies
 function loadGoogleTag() {
@@ -173,24 +174,33 @@ export default function App() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="nav-links"
           >
-            <a
-              href="#guide"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("guide");
-              }}
-            >
-              Guide
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contact");
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-50} // justér alt efter sticky header
+              spy={true}
+              isDynamic={true}
+              style={{
+                cursor: "pointer",
               }}
             >
               Contact
-            </a>
+            </Link>
+
+            <Link
+              to="guide"
+              smooth={true}
+              duration={500}
+              offset={-50}
+              spy={true}
+              isDynamic={true}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              Guide
+            </Link>
           </motion.nav>
         </header>
 
