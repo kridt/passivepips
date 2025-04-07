@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import CookieConsent from "react-cookie-consent";
 import emailjs from "emailjs-com"; // ← EmailJS import
+import { Helmet } from "react-helmet";
 
 // Dynamically inject Google Tag script when user accepts cookies
 function loadGoogleTag() {
@@ -201,9 +202,11 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="hero-title"
           >
-            Earn Consistent Forex Returns
-            <br />
-            With Zero Hidden Fees
+            <h1>
+              Earn Consistent Forex Returns
+              <br />
+              With Zero Hidden Fees
+            </h1>
           </motion.h1>
 
           <motion.p
