@@ -202,7 +202,11 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="hero-title"
           >
-            <h1>
+            <h1
+              style={{
+                fontSize: ".8em",
+              }}
+            >
               Earn Consistent Forex Returns
               <br />
               With Zero Hidden Fees
