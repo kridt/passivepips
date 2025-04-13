@@ -355,7 +355,13 @@ export default function App() {
               textAlign: "left",
             }}
           >
-            <ol style={{ listStyle: "none", padding: 0, counterReset: "step" }}>
+            <ol
+              style={{
+                listStyle: "none",
+                padding: 0,
+                counterReset: "step",
+              }}
+            >
               <li
                 style={{
                   marginBottom: "1.5rem",
@@ -454,6 +460,38 @@ export default function App() {
                   <span style={{ fontSize: "0.9rem" }}>3</span>
                 </span>
                 <strong>Create a PAMM MT4 Account</strong>
+                <br />
+                It is very important that you use meta trader 4 as platform
+                <br />
+                and you put "Server Location VantageInternational-Live 12" in
+                Additional note
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      "Server Location VantageInternational-Live 12"
+                    );
+                    alert("Copied to clipboard!");
+                  }}
+                  style={{
+                    margin: "16px 0",
+                    backgroundColor: "#2563eb",
+                    color: "white",
+                    padding: "6px 12px",
+                    fontSize: "14px",
+                    border: "none",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s ease-in-out",
+                  }}
+                  onMouseOver={(e) =>
+                    (e.target.style.backgroundColor = "#1d4ed8")
+                  }
+                  onMouseOut={(e) =>
+                    (e.target.style.backgroundColor = "#2563eb")
+                  }
+                >
+                  Copy to clipboard here!
+                </button>
                 <br />
                 You’ll receive an email with your new account number and
                 password once it’s created.
