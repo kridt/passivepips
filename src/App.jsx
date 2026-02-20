@@ -4,6 +4,7 @@ import CookieConsent from "react-cookie-consent";
 import emailjs from "emailjs-com"; // ← EmailJS import
 import { Helmet } from "react-helmet";
 import { Link } from "react-scroll";
+import { Analytics } from "@vercel/analytics/react";
 
 // Dynamically inject Google Tag script when user accepts cookies
 function loadGoogleTag() {
@@ -949,6 +950,7 @@ export default function App() {
           }
         }
       `}</style>
+      <Analytics />
     </>
   );
 }
