@@ -1,0 +1,79 @@
+{
+  "gain": 28.01,
+  "monthlyGain": 2.55,
+  "trades": 3621,
+  "totalProfit": 143.86,
+  "monthsActive": 11,
+  "positiveMonths": 10,
+  "winRate": 69.6,
+  "balance": 657.42,
+  "monthlyAnalytics": [
+    {
+      "month": "2026-02",
+      "profit": 4.53,
+      "trades": 229,
+      "gain": 0.69
+    },
+    {
+      "month": "2026-01",
+      "profit": 16.11,
+      "trades": 341,
+      "gain": 2.53
+    },
+    {
+      "month": "2025-12",
+      "profit": 7.19,
+      "trades": 262,
+      "gain": 1.14
+    },
+    {
+      "month": "2025-11",
+      "profit": 7.57,
+      "trades": 232,
+      "gain": 1.22
+    },
+    {
+      "month": "2025-10",
+      "profit": 12.17,
+      "trades": 312,
+      "gain": 2
+    },
+    {
+      "month": "2025-09",
+      "profit": 6.57,
+      "trades": 176,
+      "gain": 1.09
+    },
+    {
+      "month": "2025-07",
+      "profit": 26.47,
+      "trades": 95,
+      "gain": 4.59
+    },
+    {
+      "month": "2025-06",
+      "profit": -2.32,
+      "trades": 417,
+      "gain": -0.4
+    },
+    {
+      "month": "2025-05",
+      "profit": 20.51,
+      "trades": 456,
+      "gain": 3.67
+    },
+    {
+      "month": "2025-04",
+      "profit": 31.19,
+      "trades": 787,
+      "gain": 5.91
+    },
+    {
+      "month": "2025-03",
+      "profit": 13.87,
+      "trades": 314,
+      "gain": 2.7
+    }
+  ],
+  "generatedAt": "2026-02-20T23:31:27.446Z"
+}

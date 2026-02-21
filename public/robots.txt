@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
-Sitemap: https://passivepips.com/sitemap.xml
+Allow: /blog/
+Disallow: /assets/
+
+# Performance data (allow crawling for freshness signals)
+Allow: /performance.json
+
+# Sitemap
+Sitemap: https://www.passivepips.com/sitemap.xml
+
+# Crawl-delay hint (optional, respected by Bing/Yandex)
+Crawl-delay: 1

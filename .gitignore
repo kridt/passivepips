@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# MT4 statements (personal trade data)
+statements/
+.vercel
+
+# Generated Instagram images (large, not needed in repo)
+content/instagram-ready/*.png
+content/latest-instagram.png

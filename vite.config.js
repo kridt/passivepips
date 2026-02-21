@@ -1,8 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
+import blogPlugin from "./vite-plugin-blog.js";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), blogPlugin()],
+  assetsInclude: ["**/*.md"],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          recharts: ["recharts"],
+          "framer-motion": ["framer-motion"],
+        },
+      },
+    },
+  },
 });
