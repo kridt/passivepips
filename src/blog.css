@@ -52,7 +52,7 @@
 /* ── Blog Main ── */
 .blog-main {
   flex: 1;
-  max-width: 800px;
+  max-width: 720px;
   width: 100%;
   margin: 0 auto;
   padding: 3rem 2rem 5rem;
@@ -92,6 +92,7 @@
   border-radius: 14px;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out), box-shadow 0.3s;
@@ -240,7 +241,7 @@
 /* ── Blog Prose ── */
 .blog-prose {
   font-size: 1rem;
-  line-height: 1.85;
+  line-height: 1.8;
   color: var(--text-muted);
 }
 

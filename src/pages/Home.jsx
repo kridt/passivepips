@@ -57,7 +57,7 @@ const LazyChart = lazy(() =>
                 const isLast = index === data.length - 1;
                 return (
                   <g key={index}>
-                    <circle cx={cx} cy={cy} r={isLast ? 5 : 3.5} fill={value >= 0 ? "#4ADE80" : "#FB7185"} stroke="rgba(8,10,18,0.8)" strokeWidth={2} />
+                    <circle cx={cx} cy={cy} r={isLast ? 5 : 3.5} fill={value >= 0 ? "#4ADE80" : "rgba(226,232,240,0.25)"} stroke="rgba(8,10,18,0.8)" strokeWidth={2} />
                     {isLast && <circle cx={cx} cy={cy} r={10} fill="rgba(74,222,128,0.2)" stroke="none" />}
                   </g>
                 );
@@ -175,7 +175,7 @@ function PromoCountdown() {
 /* ─── Animated Counter ─── */
 function Counter({ value, decimals = 1, prefix = "", suffix = "", className = "" }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "0px" });
   const [display, setDisplay] = useState("0");
 
   useEffect(() => {
@@ -717,8 +717,6 @@ export default function Home() {
               No hidden fees, no lock-in. Just performance.
             </motion.p>
 
-            <PromoCountdown />
-
             <motion.div className="hero__btns" variants={fadeUp} custom={3}>
               <MagneticWrap strength={0.25}>
                 <a className="btn btn--prime btn--glow" href="https://www.vantagemarkets.com/open-live-account/?affid=MTQ2OTEz" target="_blank" rel="noopener noreferrer">
@@ -729,11 +727,13 @@ export default function Home() {
                 </a>
               </MagneticWrap>
               <MagneticWrap strength={0.2}>
-                <button className="btn btn--glass" onClick={() => scrollTo("performance")}>
+                <button className="btn btn--ghost" onClick={() => scrollTo("performance")}>
                   View Track Record
                 </button>
               </MagneticWrap>
             </motion.div>
+
+            <PromoCountdown />
             <motion.p className="hero__min-note" variants={fadeUp} custom={4}>
               Minimum $10 &mdash; withdraw anytime
             </motion.p>
@@ -900,7 +900,15 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="about__avatar-ring" />
-                <div className="about__avatar-inner">C</div>
+                <div className="about__avatar-inner">
+                  <svg viewBox="0 0 160 160" width="160" height="160" fill="none">
+                    <rect width="160" height="160" rx="16" fill="rgba(165,215,232,0.08)"/>
+                    <circle cx="80" cy="60" r="28" fill="rgba(165,215,232,0.15)" stroke="rgba(165,215,232,0.25)" strokeWidth="1.5"/>
+                    <ellipse cx="80" cy="130" rx="45" ry="35" fill="rgba(165,215,232,0.12)" stroke="rgba(165,215,232,0.2)" strokeWidth="1.5"/>
+                    <circle cx="80" cy="60" r="12" fill="rgba(165,215,232,0.25)"/>
+                    <path d="M72 58 L78 64 L88 54" stroke="rgba(74,222,128,0.6)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  </svg>
+                </div>
               </motion.div>
 
               <motion.div
@@ -1024,6 +1032,7 @@ export default function Home() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
               <motion.span className="sect__tag" variants={blurIn} custom={0}>Questions?</motion.span>
               <motion.h2 className="sect__h2" variants={blurIn} custom={1}>Get In Touch</motion.h2>
+              <motion.p className="sect__desc" variants={blurIn} custom={2}>We typically respond within 24 hours.</motion.p>
             </motion.div>
 
             <motion.form
@@ -1075,19 +1084,35 @@ export default function Home() {
 
         {/* ── FOOTER ── */}
         <footer className="ftr">
-          <div className="ftr__inner">
-            <div className="ftr__left">
-              <div className="hdr__mark" style={{ width: 28, height: 28 }}>
-                <svg viewBox="0 0 24 24" fill="none" width="13" height="13">
-                  <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M12 8L17 11V15L12 18L7 15V11L12 8Z" fill="currentColor" opacity="0.3"/>
-                </svg>
+          <div className="ftr__top">
+            <div className="ftr__brand">
+              <div className="ftr__logo">
+                <div className="hdr__mark" style={{ width: 28, height: 28 }}>
+                  <svg viewBox="0 0 24 24" fill="none" width="13" height="13">
+                    <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                    <path d="M12 8L17 11V15L12 18L7 15V11L12 8Z" fill="currentColor" opacity="0.3"/>
+                  </svg>
+                </div>
+                <span className="ftr__name">PassivePips</span>
               </div>
-              <span className="ftr__name">PassivePips</span>
+              <p className="ftr__tagline">Automated PAMM forex trading with consistent returns.</p>
             </div>
-            <div className="ftr__links">
-              <span className="ftr__disclaimer">Trading forex carries risk. Past performance does not guarantee future results.</span>
+            <div className="ftr__col">
+              <h4 className="ftr__col-title">Navigate</h4>
+              <a href="#performance" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("performance"); }}>Track Record</a>
+              <a href="#how-it-works" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("how-it-works"); }}>How It Works</a>
+              <a href="#guide" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("guide"); }}>Setup Guide</a>
+              <a href="#faq" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("faq"); }}>FAQ</a>
             </div>
+            <div className="ftr__col">
+              <h4 className="ftr__col-title">Resources</h4>
+              <Link to="/blog" className="ftr__link">Blog</Link>
+              <a href="#contact" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}>Contact</a>
+              <a href="https://pamm.vantagemarkets.com/app/auth/investor" className="ftr__link" target="_blank" rel="noopener noreferrer">PAMM Portal</a>
+            </div>
+          </div>
+          <div className="ftr__bottom">
+            <span className="ftr__disclaimer">Trading forex carries risk. Past performance does not guarantee future results.</span>
             <span className="ftr__copy">&copy; {new Date().getFullYear()} PassivePips. All rights reserved.</span>
           </div>
         </footer>
