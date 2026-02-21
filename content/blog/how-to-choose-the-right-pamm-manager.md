@@ -8,7 +8,7 @@ tags: ["PAMM trading", "risk management", "due diligence"]
 
 ## Why Your Choice of PAMM Manager Matters
 
-Investing in a PAMM account is one of the simplest ways to earn passive forex income — but the success of your investment depends almost entirely on the trader managing it. A skilled manager can deliver steady, compounding returns over time, while a reckless one can wipe out your capital in a single bad week.
+Investing in a PAMM account is one of the simplest ways to earn passive forex income — but the success of your investment depends almost entirely on the trader managing it. A skilled manager can deliver steady, compounding returns over time, while a reckless one can wipe out your capital in a single bad week. If you're still getting familiar with how these accounts work, start with our overview of [What is PAMM Trading and How Does It Work?](/blog/what-is-pamm-trading-and-how-does-it-work).
 
 Choosing the right PAMM manager isn't about finding the highest return. It's about finding the right balance between performance, risk, and transparency.
 
@@ -51,7 +51,7 @@ At PassivePips, we believe in full transparency. Our PAMM account provides:
 - **Conservative risk management** — we target consistent growth, not home runs
 - **No lock-in periods** — withdraw your funds anytime
 
-We manage risk first and let the returns follow. That's the approach that builds long-term wealth.
+We manage risk first and let the returns follow. That's the approach that builds long-term wealth. To understand the broader advantages, see our article on the [5 Benefits of Passive Forex Income](/blog/5-benefits-of-passive-forex-income).
 
 ## The Bottom Line
 
