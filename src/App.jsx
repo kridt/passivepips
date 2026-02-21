@@ -7,6 +7,7 @@ import "./App.css";
 const Home = lazy(() => import("./pages/Home.jsx"));
 const BlogList = lazy(() => import("./pages/BlogList.jsx"));
 const BlogPost = lazy(() => import("./pages/BlogPost.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 
 /* ─── Vercel Web Analytics ─── */
 inject();
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
 

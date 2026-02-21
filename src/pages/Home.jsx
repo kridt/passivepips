@@ -660,11 +660,8 @@ export default function Home() {
         <ScrollProgress />
 
         {/* ── HEADER ── */}
-        <motion.header
-          className={`hdr ${scrolled ? "hdr--solid" : ""}`}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <header
+          className={`hdr hdr--animate ${scrolled ? "hdr--solid" : ""}`}
         >
           <div className="hdr__inner">
             <button className="hdr__logo" onClick={() => scrollTo("home")} aria-label="PassivePips — Return to top">
@@ -694,7 +691,7 @@ export default function Home() {
               <span /><span /><span />
             </button>
           </div>
-        </motion.header>
+        </header>
 
         <main>
         {/* ── HERO ── */}
