@@ -346,8 +346,8 @@ strong { font-weight: 600; }
 .sect__inner { max-width: 1000px; margin: 0 auto; }
 .sect__inner--narrow { max-width: 560px; }
 .sect__tag {
-  display: inline-block; font-size: 0.72rem; text-transform: uppercase;
-  letter-spacing: 0.14em; color: var(--accent); margin-bottom: 0.75rem;
+  display: block; font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--accent); margin-bottom: 1rem;
   font-weight: 600; font-family: var(--font-display);
 }
 .sect__h2 {
