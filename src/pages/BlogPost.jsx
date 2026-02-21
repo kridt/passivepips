@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ReactMarkdown from "react-markdown";
@@ -7,6 +8,19 @@ import "../blog.css";
 
 export default function BlogPost() {
   const { slug } = useParams();
+  const [views, setViews] = useState(null);
+
+  useEffect(() => {
+    if (!slug) return;
+    fetch("/api/views", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug }),
+    })
+      .then((r) => r.json())
+      .then((d) => setViews(d.views))
+      .catch(() => {});
+  }, [slug]);
 
   const modules = import.meta.glob("/content/blog/*.md", { query: "?raw", import: "default", eager: true });
   let post = null;
@@ -95,6 +109,15 @@ export default function BlogPost() {
                 <time dateTime={post.date}>
                   {new Date(post.date + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
                 </time>
+              )}
+              {views !== null && (
+                <span className="blog-views">
+                  <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" />
+                    <circle cx="8" cy="8" r="2" />
+                  </svg>
+                  {views} {views === 1 ? "view" : "views"}
+                </span>
               )}
               {post.tags?.length > 0 && (
                 <div className="blog-article__tags">

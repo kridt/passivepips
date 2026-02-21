@@ -1,9 +1,21 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import posts from "virtual:blog-manifest";
 import "../blog.css";
 
 export default function BlogList() {
+  const [viewCounts, setViewCounts] = useState({});
+
+  useEffect(() => {
+    if (posts.length === 0) return;
+    const slugs = posts.map((p) => p.slug).join(",");
+    fetch(`/api/views?slugs=${slugs}`)
+      .then((r) => r.json())
+      .then((d) => setViewCounts(d))
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -53,6 +65,15 @@ export default function BlogList() {
                           <span key={tag} className="blog-tag">{tag}</span>
                         ))}
                       </div>
+                    )}
+                    {viewCounts[post.slug] > 0 && (
+                      <span className="blog-views blog-views--card">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" />
+                          <circle cx="8" cy="8" r="2" />
+                        </svg>
+                        {viewCounts[post.slug]}
+                      </span>
                     )}
                   </div>
                   <span className="blog-card__arrow">

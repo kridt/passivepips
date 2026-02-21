@@ -26,6 +26,7 @@ dist-ssr
 # MT4 statements (personal trade data)
 statements/
 .vercel
+.env*
 
 # Generated Instagram images (large, not needed in repo)
 content/instagram-ready/*.png
