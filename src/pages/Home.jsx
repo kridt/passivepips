@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef, useCallback, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import { motion, useMotionValue, useTransform, useSpring, useInView, useScroll, animate, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet-async";
@@ -681,6 +682,7 @@ export default function Home() {
                   {item.label}
                 </a>
               ))}
+              <Link to="/blog" className="hdr__link" onClick={() => setMobileNav(false)}>Blog</Link>
               <a href="#guide" className="hdr__cta" onClick={(e) => { e.preventDefault(); scrollTo("guide"); }}>
                 Get Started
                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
