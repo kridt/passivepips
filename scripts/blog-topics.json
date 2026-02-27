@@ -94,7 +94,7 @@
       "fund management"
     ],
     "targetQuery": "difference between PAMM and MAM accounts",
-    "used": false
+    "used": true
   },
   {
     "title": "How Compound Interest Works in Forex PAMM Accounts",
