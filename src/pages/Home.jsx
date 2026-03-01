@@ -1099,10 +1099,14 @@ export default function Home() {
             </div>
             <div className="ftr__col">
               <h4 className="ftr__col-title">Navigate</h4>
-              <a href="#performance" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("performance"); }}>Track Record</a>
-              <a href="#how-it-works" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("how-it-works"); }}>How It Works</a>
-              <a href="#guide" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("guide"); }}>Setup Guide</a>
-              <a href="#faq" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("faq"); }}>FAQ</a>
+              {[
+                { to: "performance", label: "Track Record" },
+                { to: "how-it-works", label: "How It Works" },
+                { to: "guide", label: "Setup Guide" },
+                { to: "faq", label: "FAQ" },
+              ].map((item) => (
+                <a key={item.to} href={`#${item.to}`} className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo(item.to); }}>{item.label}</a>
+              ))}
             </div>
             <div className="ftr__col">
               <h4 className="ftr__col-title">Resources</h4>
