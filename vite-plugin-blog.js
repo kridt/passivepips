@@ -25,8 +25,10 @@ export default function blogPlugin() {
         return {
           slug,
           title: data.title || slug,
+          seoTitle: data.seoTitle || null,
           date: data.date || null,
           excerpt: data.excerpt || "",
+          metaDescription: data.metaDescription || null,
           tags: data.tags || [],
           file,
         };
@@ -47,8 +49,10 @@ export default function blogPlugin() {
         return {
           slug: fileSlug,
           title: data.title || fileSlug,
+          seoTitle: data.seoTitle || null,
           date: data.date || null,
           excerpt: data.excerpt || "",
+          metaDescription: data.metaDescription || null,
           tags: data.tags || [],
           content,
         };

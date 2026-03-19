@@ -1,8 +1,10 @@
 ---
 title: "How to Read a PAMM Account Performance Report"
+seoTitle: "Reading a PAMM Performance Report"
 date: "2026-02-26"
 slug: "how-to-read-a-pamm-account-performance-report"
-excerpt: "When considering passive forex investing through PAMM (Percentage Allocation Management Module) accounts, understanding how to read performance reports is cruci..."
+excerpt: "Understanding PAMM performance reports is crucial before investing. Learn to interpret drawdown, win rate, and monthly return data to make informed decisions."
+metaDescription: "PAMM performance reports reveal the truth behind any managed account. Learn to read drawdown, win rate, and returns before you invest. Get started today."
 tags: ["PAMM performance","trading stats","track record"]
 ---
 
