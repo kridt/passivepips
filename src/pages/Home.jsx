@@ -707,12 +707,14 @@ export default function Home() {
             </motion.div>
 
             <motion.h1 className="hero__h1" variants={fadeUp} custom={1}>
-              <span className="hero__h1-line">Your Money, Trading Smarter</span>
-              <span className="hero__h1-line hero__h1-line--accent">— While You Sleep</span>
+              <span className="hero__h1-line">Your Money,</span>
+              <span className="hero__h1-line hero__h1-line--accent">Trading Smarter —</span>
+              <span className="hero__h1-line hero__h1-line--accent">While You Sleep</span>
             </motion.h1>
 
             <motion.p className="hero__sub" variants={fadeUp} custom={2}>
-              Our algorithm trades forex on your behalf. Start with as little as $10. No trading experience needed.
+              Our algorithm trades forex on your behalf.<br />
+              Start with as little as $10. No trading experience needed.
             </motion.p>
 
             <motion.div className="hero__btns" variants={fadeUp} custom={3}>
@@ -880,7 +882,7 @@ export default function Home() {
                 variants={stagger}
               >
                 <motion.p variants={fadeUp}>
-                  I started PassivePips to give everyday people access to the same automated forex strategies that institutional investors use. With years of trading experience and a focus on algorithmic risk management, I built a PAMM strategy that prioritises steady, consistent returns over high-risk bets.
+                  I started PassivePips to give everyday people access to the same automated forex strategies that institutional investors use. With years of trading experience and a focus on algorithmic risk management, I built a PAMM strategy that prioritises steady, controlled growth over high-risk bets.
                 </motion.p>
                 <motion.p variants={fadeUp}>
                   My approach is simple: transparency first. You can verify every result on the PAMM portal, I never touch your funds directly, and you can withdraw anytime. I earn only when the broker earns from your trading volume &mdash; so my incentive is to keep you invested and profitable.
@@ -1044,11 +1046,6 @@ export default function Home() {
 
         </main>
 
-        {/* ── REGULATORY DISCLAIMER ── */}
-        <div className="regulatory-disclaimer">
-          <p>PassivePips operates in partnership with Vantage Markets, an ASIC-regulated broker. Trading forex and CFDs carries significant risk. Past performance does not guarantee future results.</p>
-        </div>
-
         {/* ── FOOTER ── */}
         <footer className="ftr">
           <div className="ftr__top">
@@ -1082,6 +1079,9 @@ export default function Home() {
               <a href="https://pamm.vantagemarkets.com/app/auth/investor" className="ftr__link" target="_blank" rel="noopener noreferrer">PAMM Portal</a>
               <Link to="/privacy" className="ftr__link">Privacy Policy</Link>
             </div>
+          </div>
+          <div className="ftr__regulatory">
+            <p className="ftr__regulatory-text">PassivePips operates in partnership with Vantage Markets, an ASIC-regulated broker. Trading forex and CFDs carries significant risk and may not be suitable for all investors. You could lose more than your initial investment. Past performance does not guarantee future results.</p>
           </div>
           <div className="ftr__bottom">
             <span className="ftr__disclaimer">Trading forex carries risk. Past performance does not guarantee future results.</span>

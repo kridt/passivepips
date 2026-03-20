@@ -599,9 +599,15 @@ strong { font-weight: 600; }
   font-size: 0.82rem; color: var(--text-dim);
 }
 .ftr__link:hover { color: var(--accent); }
-.ftr__bottom {
-  max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem;
+.ftr__regulatory {
+  max-width: 1000px; margin: 0 auto; padding: 1.25rem 2rem 0;
   border-top: 1px solid var(--border);
+}
+.ftr__regulatory-text {
+  font-size: 0.7rem; color: var(--text-dim); line-height: 1.6; font-style: italic;
+}
+.ftr__bottom {
+  max-width: 1000px; margin: 0 auto; padding: 1rem 2rem 1.5rem;
   display: flex; align-items: center; justify-content: space-between;
 }
 .ftr__disclaimer { font-size: 0.68rem; color: var(--text-dim); font-style: italic; }
