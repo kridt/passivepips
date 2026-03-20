@@ -707,14 +707,12 @@ export default function Home() {
             </motion.div>
 
             <motion.h1 className="hero__h1" variants={fadeUp} custom={1}>
-              <span className="hero__h1-line">Your money,</span>
-              <span className="hero__h1-line hero__h1-line--accent">working around</span>
-              <span className="hero__h1-line hero__h1-line--accent">the clock</span>
+              <span className="hero__h1-line">Your Money, Trading Smarter</span>
+              <span className="hero__h1-line hero__h1-line--accent">— While You Sleep</span>
             </motion.h1>
 
             <motion.p className="hero__sub" variants={fadeUp} custom={2}>
-              Consistent forex returns through automated strategies.<br />
-              No hidden fees, no lock-in. Just performance.
+              Our algorithm trades forex on your behalf. Start with as little as $10. No trading experience needed.
             </motion.p>
 
             <motion.div className="hero__btns" variants={fadeUp} custom={3}>
@@ -739,42 +737,6 @@ export default function Home() {
             </motion.p>
           </motion.div>
 
-          {stats && (
-            <motion.div
-              className="hero__metrics"
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {[
-                { val: <Counter value={stats.gain} prefix="+" suffix="%" className="hero__metric-val pos" />, lbl: "Total Return" },
-                { val: <Counter value={stats.winRate} suffix="%" className="hero__metric-val pos" />, lbl: "Win Rate" },
-                { val: <Counter value={stats.monthsActive} decimals={0} className="hero__metric-val" />, lbl: "Months Active" },
-                { val: <Counter value={stats.trades} decimals={0} className="hero__metric-val" />, lbl: "Trades Executed" },
-              ].map((m, i) => (
-                <motion.div
-                  key={i}
-                  className="hero__metric"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  {m.val}
-                  <span className="hero__metric-lbl">{m.lbl}</span>
-                </motion.div>
-              ))}
-              {stats.generatedAt && (
-                <motion.span
-                  className="hero__metrics-date"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.4, duration: 0.5 }}
-                >
-                  Updated {new Date(stats.generatedAt).toLocaleDateString("en-US", { month: "short", year: "numeric" })}
-                </motion.span>
-              )}
-            </motion.div>
-          )}
         </section>
 
         <SectionDivider />
@@ -918,7 +880,7 @@ export default function Home() {
                 variants={stagger}
               >
                 <motion.p variants={fadeUp}>
-                  I started PassivePips to give everyday people access to the same automated forex strategies that institutional investors use. With 4 years of trading experience and a focus on risk management, I built a PAMM strategy that prioritises steady, consistent returns over high-risk bets.
+                  I started PassivePips to give everyday people access to the same automated forex strategies that institutional investors use. With years of trading experience and a focus on algorithmic risk management, I built a PAMM strategy that prioritises steady, consistent returns over high-risk bets.
                 </motion.p>
                 <motion.p variants={fadeUp}>
                   My approach is simple: transparency first. You can verify every result on the PAMM portal, I never touch your funds directly, and you can withdraw anytime. I earn only when the broker earns from your trading volume &mdash; so my incentive is to keep you invested and profitable.
@@ -1082,6 +1044,11 @@ export default function Home() {
 
         </main>
 
+        {/* ── REGULATORY DISCLAIMER ── */}
+        <div className="regulatory-disclaimer">
+          <p>PassivePips operates in partnership with Vantage Markets, an ASIC-regulated broker. Trading forex and CFDs carries significant risk. Past performance does not guarantee future results.</p>
+        </div>
+
         {/* ── FOOTER ── */}
         <footer className="ftr">
           <div className="ftr__top">
@@ -1095,7 +1062,7 @@ export default function Home() {
                 </div>
                 <span className="ftr__name">PassivePips</span>
               </div>
-              <p className="ftr__tagline">Automated PAMM forex trading with consistent returns.</p>
+              <p className="ftr__tagline">Automated PAMM forex trading with transparent track record.</p>
             </div>
             <div className="ftr__col">
               <h4 className="ftr__col-title">Navigate</h4>
