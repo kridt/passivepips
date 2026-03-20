@@ -1113,6 +1113,7 @@ export default function Home() {
               <Link to="/blog" className="ftr__link">Blog</Link>
               <a href="#contact" className="ftr__link" onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}>Contact</a>
               <a href="https://pamm.vantagemarkets.com/app/auth/investor" className="ftr__link" target="_blank" rel="noopener noreferrer">PAMM Portal</a>
+              <Link to="/privacy" className="ftr__link">Privacy Policy</Link>
             </div>
           </div>
           <div className="ftr__bottom">
