@@ -607,6 +607,22 @@ strong { font-weight: 600; }
 .ftr__disclaimer { font-size: 0.68rem; color: var(--text-dim); font-style: italic; }
 .ftr__copy { font-size: 0.72rem; color: var(--text-dim); }
 
+/* ── REGULATORY DISCLAIMER ── */
+.regulatory-disclaimer {
+  background: rgba(165,215,232,0.04);
+  border-top: 1px solid rgba(165,215,232,0.08);
+  border-bottom: 1px solid rgba(165,215,232,0.08);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.regulatory-disclaimer p {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* ── SECTION DIVIDER ── */
 .sect-divider {
   position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
