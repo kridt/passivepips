@@ -1,8 +1,10 @@
 ---
 title: "Top Mistakes New Forex Investors Make"
+seoTitle: "Top Mistakes New Forex Investors Make"
 date: "2026-03-01"
 slug: "top-mistakes-new-forex-investors-make"
-excerpt: "Entering the world of forex trading can be both exciting and daunting. For new investors, the potential to earn passive income through methods like PAMM account..."
+excerpt: "New forex investors often lose money making the same avoidable mistakes. From overleveraging to poor manager selection, here's what to watch out for."
+metaDescription: "New forex investors lose money making the same avoidable mistakes. Learn the most common errors — from overleveraging to ignoring drawdown — and avoid them."
 tags: ["forex mistakes beginners","investing errors","new trader tips"]
 ---
 

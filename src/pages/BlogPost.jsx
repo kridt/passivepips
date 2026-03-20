@@ -81,16 +81,28 @@ export default function BlogPost() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | PassivePips Blog</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{post.seoTitle || post.title} | PassivePips Blog</title>
+        <meta name="description" content={post.metaDescription || post.excerpt} />
         <link rel="canonical" href={`https://www.passivepips.com/blog/${slug}`} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta property="og:title" content={post.seoTitle || post.title} />
+        <meta property="og:description" content={post.metaDescription || post.excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.passivepips.com/blog/${slug}`} />
         <meta property="og:image" content="https://www.passivepips.com/og-preview.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="PassivePips" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.seoTitle || post.title} />
+        <meta name="twitter:description" content={post.metaDescription || post.excerpt} />
+        <meta name="twitter:image" content="https://www.passivepips.com/og-preview.png" />
+        {post.date && <meta property="article:published_time" content={`${post.date}T00:00:00Z`} />}
+        {post.date && <meta property="article:modified_time" content={`${post.date}T00:00:00Z`} />}
+        <meta property="article:author" content="Christian" />
+        {post.tags?.map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -154,6 +166,9 @@ export default function BlogPost() {
                   <path d="M3 8h10M9 4l4 4-4 4" />
                 </svg>
               </a>
+              <p className="blog-cta__disclaimer">
+                Trading forex carries significant risk. Past performance does not guarantee future results. Only invest what you can afford to lose.
+              </p>
             </div>
           </article>
 

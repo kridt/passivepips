@@ -1,8 +1,10 @@
 ---
 title: "What Are Forex Drawdowns and Why They Matter"
+seoTitle: "Forex Drawdowns Explained: Why They Matter"
 date: "2026-02-24"
 slug: "what-are-forex-drawdowns-and-why-they-matter"
-excerpt: "When it comes to trading in the forex market, the term \"drawdown\" often surfaces in discussions among traders and investors. But what exactly is a drawdown, and..."
+excerpt: "Forex drawdown is a critical risk metric that every investor must understand. Learn what it means, how to evaluate it, and how it affects PAMM accounts."
+metaDescription: "Forex drawdown is the most overlooked risk metric. Learn what max drawdown means in PAMM accounts, how to evaluate risk, and protect your capital today."
 tags: ["forex drawdown","max drawdown","trading risk"]
 ---
 
